@@ -1,0 +1,60 @@
+@keyframes flyingBee {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes marquee2 {
+    0% {
+        background-position: -1190px;
+    }
+
+    100% {
+        background-position: 0;
+    }
+}
+
+nav {
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpB7dsC831sQpLMrD9JAIE1HuCCirIenuqzA&usqp=CAU); */
+    /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRB2LPgGFoy9KP25offTLJ-HXl876qIwQK5cg&usqp=CAU); */
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXALhGtOnrAA6t84KiEbQHUYEPUyXlNhgNGg&usqp=CAU);
+    height: 150px;
+    animation: marquee2 75s infinite linear;
+    animation-duration: 100s;
+}
+
+@keyframes slideBg {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.flying-bee {
+    position: absolute;
+    /* top: 50%; */
+    left: 0;
+    animation: flyingBee 20s linear infinite;
+}
+
+.nav-bg-container {
+    position: relative;
+}
+
+.nav-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: left top;
+    animation: slideBg 20s linear infinite;
+}
